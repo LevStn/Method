@@ -1,10 +1,7 @@
 ﻿using Homework1;
+int a = 2;
+int b = 4;
+int c = 12;
 
-string a = "6";
-string b = "5";
-int result;
-int remainder;
-HW1Class.SwapTheContentsOfTwoVariables(ref a, ref b);
-
-Console.WriteLine (a);
-Console.WriteLine (b);
+int result= HW1Class.GetTheResultOfLinearEquation(a, b, c);
+Console.WriteLine(result);

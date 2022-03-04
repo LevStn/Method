@@ -41,22 +41,8 @@ namespace Homework1
             a = b;
             b = tmp;
         }
-
-        public static void GetTheResultOfLinearEquation4()
-        {
-            int a;
-            int b;
-            int c;
-            int result;
-            a = Convert.ToInt32(Console.ReadLine());
-            b = Convert.ToInt32(Console.ReadLine());
-            c = Convert.ToInt32(Console.ReadLine());
-            result = SolvingLinearEquation4(a, b, c);
-
-            Console.WriteLine(result);
-
-        }
-        public static int SolvingLinearEquation4(int a, int b, int c)
+       
+        public static int GetTheResultOfLinearEquation(int a, int b, int c)
         {
 
 
