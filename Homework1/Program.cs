@@ -1,7 +1,13 @@
 ﻿using Homework1;
-int a = 2;
-int b = 4;
-int c = 12;
+double a = 2;
+double b = 3;
+double c = 6;
 
-int result= HW1Class.GetTheResultOfLinearEquation(a, b, c);
-Console.WriteLine(result);
+double z = 5;
+double pointA;
+double pointB;
+
+ HW1Class.EquationOfaStraightLineIn4Coordinates(a, b, c, z,  out  pointB, out pointA);
+
+Console.WriteLine(pointA);
+Console.WriteLine(pointB);

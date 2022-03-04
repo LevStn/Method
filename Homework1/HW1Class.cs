@@ -13,7 +13,7 @@ namespace Homework1
             
             if (b == 0)
             {
-                throw new Exception("variable b cannot == 0");
+                throw new Exception("variable b can’t == 0");
             }
             result = a / b;
             remainder = a % b;
@@ -52,25 +52,14 @@ namespace Homework1
         }
 
 
-        public static string EquationOfaStraightLineIn4Coordinates()
+        public static void GetTheSolutionOfTheLinearEquationStraightLineIn4Coordinates(double x1, double y1, double x2,double y2,
+            out double pointA, out double pointB)
         {
 
-            double x1 = Convert.ToDouble(Console.ReadLine());
-            double y1 = Convert.ToDouble(Console.ReadLine());
-            double x2 = Convert.ToDouble(Console.ReadLine());
-            double y2 = Convert.ToDouble(Console.ReadLine());
-            double pointA = (y1 - y2) / (x1 - x2);
-            double pointB = y2 - pointA * x2;
-
-            string ResultA = Convert.ToString(pointA);
-            string ResultB = Convert.ToString(pointB);
-            string result = ($"{ResultA}   {ResultB}");
-            return result;
+            
+            pointA = (y1 - y2) / (x1 - x2);
+            pointB = y2 - pointA * x2;
+                    
         }
-
-
     }
-
-
-
 }
