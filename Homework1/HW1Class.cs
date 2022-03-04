@@ -13,7 +13,7 @@ namespace Homework1
             
             if (b == 0)
             {
-                throw new Exception("Значение b не может == 0");
+                throw new Exception("variable b cannot == 0");
             }
             result = a / b;
             remainder = a % b;
@@ -24,7 +24,10 @@ namespace Homework1
 
         public static int GetTheResultOfEquation(int a, int b)
         {
-
+            if(b==a)
+            {
+                throw new Exception("a can’t == b");
+            }
 
             int result = (5 * a + (b * b)) / (b - a);
 
@@ -32,7 +35,12 @@ namespace Homework1
         }
 
 
-
+        public static void SwapTheContentsOfTwoVariables(ref string a, ref string b)
+        {
+            string tmp = a;
+            a = b;
+            b = tmp;
+        }
 
         public static void GetTheResultOfLinearEquation4()
         {

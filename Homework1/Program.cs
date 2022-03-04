@@ -1,10 +1,10 @@
 ﻿using Homework1;
 
-int a = 6;
-int b = 0;
+string a = "6";
+string b = "5";
 int result;
 int remainder;
-HW1Class.GetResultDevisionWithRemaider (a, b, out result, out remainder);
+HW1Class.SwapTheContentsOfTwoVariables(ref a, ref b);
 
-Console.WriteLine (result);
-Console.WriteLine (remainder);
+Console.WriteLine (a);
+Console.WriteLine (b);
