@@ -8,22 +8,21 @@ namespace Homework1
 {
     static class HW1Class
     {
-
-        public static void GetTheResultOfEquation2()
+        public static void GetResultDevisionWithRemaider(int a,  int b, out int result, out int remainder)
         {
-            int a;
-            int b;
-            int result;
+            
+            if (b == 0)
+            {
+                throw new Exception("Значение b не может == 0");
+            }
+            result = a / b;
+            remainder = a % b;
+        }  
 
-            a = Convert.ToInt32(Console.ReadLine());
-            b = Convert.ToInt32(Console.ReadLine());
-            result = SolveEquationNumber2(a, b);
 
 
-            Console.WriteLine(result);
 
-        }
-        public static int SolveEquationNumber2(int a, int b)
+        public static int GetTheResultOfEquation(int a, int b)
         {
 
 
