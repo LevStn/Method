@@ -1,13 +1,8 @@
-﻿using Homework1;
-double a = 2;
+﻿using Homework4;
+double a = 3;
 double b = 3;
-double c = 6;
+double result;
 
-double z = 5;
-double pointA;
-double pointB;
+result= HW2Class.CompareTwoValuesAndPerformAMathematicalCharacteristicDependingOnTheComparison(a, b);
 
- HW1Class.EquationOfaStraightLineIn4Coordinates(a, b, c, z,  out  pointB, out pointA);
-
-Console.WriteLine(pointA);
-Console.WriteLine(pointB);
+Console.WriteLine(result);

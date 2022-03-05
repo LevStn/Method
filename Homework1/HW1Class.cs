@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Homework1
+namespace Homework4
 {
     static class HW1Class
     {

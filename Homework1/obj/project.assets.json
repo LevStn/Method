@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Milana\\source\\repos\\Method\\Homework1\\Homework1.csproj",
-      "projectName": "Homework1",
-      "projectPath": "C:\\Users\\Milana\\source\\repos\\Method\\Homework1\\Homework1.csproj",
+      "projectUniqueName": "C:\\Users\\Milana\\source\\repos\\Method\\Homework1\\Homework4.csproj",
+      "projectName": "Homework4",
+      "projectPath": "C:\\Users\\Milana\\source\\repos\\Method\\Homework1\\Homework4.csproj",
       "packagesPath": "C:\\Users\\Milana\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Milana\\source\\repos\\Method\\Homework1\\obj\\",
       "projectStyle": "PackageReference",
