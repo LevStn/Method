@@ -1,8 +1,8 @@
 ﻿using Homework4;
-double a = 3;
-double b = 3;
-double result;
+double a = 0;
+double b = 0;
+string result;
 
-result= HW2Class.CompareTwoValuesAndPerformAMathematicalCharacteristicDependingOnTheComparison(a, b);
+result= HW2Class.GetQuarterBasedOnTwoCoordinates(a, b);
 
 Console.WriteLine(result);
