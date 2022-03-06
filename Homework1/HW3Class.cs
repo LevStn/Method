@@ -59,7 +59,25 @@ namespace Homework4
             }
             return result;
         }
+        public static int GetSumOfNumbersFromTheRangeThatAreDivisibleWithoutARemainderBy7(int a, int b)
+        {
+            int tmp;
+            int result = 0;
 
+            if(b<a)
+            {
+                tmp = b;
+                b = a;
+                a = tmp;
+            }
+            for (int i=a;i<=b; i++)
+
+                if (i%7==0)
+                {
+                    result += i;
+                }
+            return result;
+        }
 
     }
 }
