@@ -17,7 +17,19 @@ namespace Homework4
             }
             return result;
         }
-
+        public static int GetAllNumbersThatAreDivisibleByTheNumberA(int a)
+        {
+            int result = 0;
+            for (int i = 1; i <= 1000; i++)
+            {
+                if (i % a == 0)
+                {
+                    result = +i;
+                    Console.WriteLine(result);
+                }
+            }
+            return result;
+        }
 
 
 
