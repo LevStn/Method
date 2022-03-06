@@ -127,6 +127,111 @@ namespace Homework4
 
             return result;
         }
+        public static string ConvertingTwoDigitNumberToLetters(int numb)
+        {
+            int oneNumb = numb % 10;
+            int decade = numb / 10;
+            int upToTwenty = numb / 1;
+
+            string totalDecade = "";
+
+            switch (decade)
+            {
+                case 1:
+                    totalDecade += "Десять";
+                    break;
+                case 2:
+                    totalDecade += "Двадцать";
+                    break;
+                case 3:
+                    totalDecade += "Тридцать";
+                    break;
+                case 4:
+                    totalDecade += "Сорок";
+                    break;
+                case 5:
+                    totalDecade += "Пятьдесят";
+                    break;
+                case 6:
+                    totalDecade += "Шестьдесят";
+                    break;
+                case 7:
+                    totalDecade += "Семьдесят";
+                    break;
+                case 8:
+                    totalDecade += "Восемьдесят";
+                    break;
+                case 9:
+                    totalDecade += "Девяносто";
+                    break;
+
+
+
+
+            }
+            switch (oneNumb)
+            {
+                case 1:
+                    totalDecade += " один";
+                    break;
+                case 2:
+                    totalDecade += " два";
+                    break;
+                case 3:
+                    totalDecade += " три";
+                    break;
+                case 4:
+                    totalDecade += " четыре";
+                    break;
+                case 5:
+                    totalDecade += " пять";
+                    break;
+                case 6:
+                    totalDecade += " шесть";
+                    break;
+                case 7:
+                    totalDecade += " семь";
+                    break;
+                case 8:
+                    totalDecade += " восемь";
+                    break;
+                case 9:
+                    totalDecade += " девять";
+                    break;
+            }
+            switch (upToTwenty)
+            {
+                case 11:
+                    totalDecade = "Одинадцать";
+                    break;
+                case 12:
+                    totalDecade = "Двенадцать";
+                    break;
+                case 13:
+                    totalDecade = "Тринадцать";
+                    break;
+                case 14:
+                    totalDecade = "Четырнадцать";
+                    break;
+                case 15:
+                    totalDecade += "Пятнадцать";
+                    break;
+                case 16:
+                    totalDecade = "Шестнадцать";
+                    break;
+                case 17:
+                    totalDecade = "Семьнадцать";
+                    break;
+                case 18:
+                    totalDecade = "Восемнадцать";
+                    break;
+                case 19:
+                    totalDecade = "Девятнадцать";
+                    break;
+            }
+
+            return totalDecade;
+        }
 
     }
 }
