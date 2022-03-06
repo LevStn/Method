@@ -71,12 +71,41 @@ namespace Homework4
             }
 
                 return result; 
-                    
-            
-
         }
-         
+        public static string GetNumbersInAscendingOrder(double a, double b, double c)
+        {
+            string result;
+            if (a > b && a > c && b > c)
+            {
+                result = "${ c, b, a }";
 
-         
+            }
+            else if (a > b && a > c && b < c)
+            {
+                result = "${b, c, a}";
+            }
+            else if (a > b && a < c && b < c)
+            {
+                result = "${b, a, c}";
+            }
+            else if (a > c && b > c && b > a)
+            {
+                result = "${c, a, b }";
+            }
+            else if (a < b && a < c && b > c)
+            {
+                result = "${a, c, b}";
+            }
+            else if (a < b && a < c && b > c)
+            {
+                result = "${a, b, c}";
+            }
+            else
+                throw new Exception("The numbers cannot be equal to each other");
+
+            return result;
+        }
+
+
     }
 }
