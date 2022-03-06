@@ -105,7 +105,28 @@ namespace Homework4
 
             return result;
         }
+        public static string SloveTheSquareEquation(double a, double b, double c)
+        {
+            string result;
+            double discriminant = (b * b) - 4 * a * c;
+            double rootD = Math.Sqrt(discriminant);
+            double x1 = (-b + rootD) / (2 * a);
+            double x2 = (-b - rootD) / (2 * a);
+            if (discriminant > 0)
+            {
+                result = ($"X(1)={x1} x(2)={x2}");
+            }
+            else if (discriminant == 0)
+            {
+                result = ($"X={ -b / (2 * a)}");
+            }
+            else
+            {
+                result = "Нет корней";
+            }
 
+            return result;
+        }
 
     }
 }
