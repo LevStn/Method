@@ -30,7 +30,20 @@ namespace Homework4
             }
             return result;
         }
+        public static void FindTheNumberOfPositiveNumbersWhoseSquareIsLessThan(int a)
+        {
+            int result = 0;
+            for (int i = 1; i < a; i++)
+            {
+                int square = i * i;
+                if (square < a)
+                {
+                    result = square / i;
+                }
 
+            }
+            Console.WriteLine(result);
+        }
 
 
 
