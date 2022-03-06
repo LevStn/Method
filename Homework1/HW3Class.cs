@@ -78,6 +78,16 @@ namespace Homework4
                 }
             return result;
         }
-
+        public static int OrdinalNumberOfFibonacciNumber(int n)
+        {
+            int firstNumbFib = 0;
+            int secondNumbFib = 1;
+            for (int i=0; i<n; i++)
+            {
+                firstNumbFib = firstNumbFib + secondNumbFib;
+                secondNumbFib = firstNumbFib- secondNumbFib;
+            }
+            return firstNumbFib;
+        }
     }
 }
