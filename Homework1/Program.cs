@@ -1,8 +1,6 @@
 ﻿using Homework4;
-double a = 0;
-double b = 0;
-string result;
+int a = 9;
 
-result= HW2Class.GetQuarterBasedOnTwoCoordinates(a, b);
+int result=HW3Class.GetGreatestDivisorOtherThanOriginalNumber(a);
 
 Console.WriteLine(result);

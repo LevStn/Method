@@ -44,7 +44,21 @@ namespace Homework4
             }
             Console.WriteLine(result);
         }
-
+        public static int GetGreatestDivisorOtherThanOriginalNumber(int a)
+        {
+            int remainder = 1;
+            int result = 0;
+            for(int i=1; i<a; i++)
+            {
+                remainder = a % i;
+                if (remainder == 0)
+                {
+                    result = +i;
+                }
+                
+            }
+            return result;
+        }
 
 
     }
