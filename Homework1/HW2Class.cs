@@ -107,6 +107,10 @@ namespace Homework4
         }
         public static string SloveTheSquareEquation(double a, double b, double c)
         {
+            if(a==0|| b==0 )
+            {
+                throw new Exception("a can’t ==0, b can’t ==0");
+            }
             string result;
             double discriminant = (b * b) - 4 * a * c;
             double rootD = Math.Sqrt(discriminant);
@@ -127,6 +131,9 @@ namespace Homework4
 
             return result;
         }
+
+
+    
         public static string ConvertingTwoDigitNumberToLetters(int numb)
         {
             int oneNumb = numb % 10;
@@ -135,6 +142,11 @@ namespace Homework4
 
             string totalDecade = "";
 
+            if(numb<10 || numb>99)
+            {
+                throw new Exception("numb can’t be unambiguous, numb can’t be three-digit");
+
+            }
             switch (decade)
             {
                 case 1:

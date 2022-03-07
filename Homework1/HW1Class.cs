@@ -42,11 +42,14 @@ namespace Homework4
             b = tmp;
         }
        
-        public static int GetTheResultOfLinearEquation(int a, int b, int c)
+        public static double GetTheResultOfLinearEquation(double a, double b, double c) 
         {
+            if(a==0)
+            {
+                throw new Exception("a can’t ==0");
+            }
 
-
-            int result = (c - b) / 2;
+            double result = (c - b) / 2;
 
             return result;
         }
@@ -55,8 +58,11 @@ namespace Homework4
         public static void GetTheSolutionOfTheLinearEquationStraightLineIn4Coordinates(double x1, double y1, double x2,double y2,
             out double pointA, out double pointB)
         {
+            if (x1 == x2)
+            {
+                throw new Exception("x1 can’t == x2");
+            }
 
-            
             pointA = (y1 - y2) / (x1 - x2);
             pointB = y2 - pointA * x2;
                     
