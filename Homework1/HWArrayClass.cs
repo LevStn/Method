@@ -24,7 +24,7 @@ namespace Homework4
             int[] a = new int[lenght];
             for (int i = 0; i < a.Length; i++)
             {
-                a[i] = r.Next(100);
+                a[i] = r.Next(10);
             }
             return a;
         }
@@ -97,8 +97,22 @@ namespace Homework4
                     return i;
                 }
             }
-            return  1;
-                
+            return  1;               
         }
+        public static int SumOfElementsArray()
+        {
+            int[] firstArray = GenerateArray(10);
+            WriteArray(firstArray);
+            int sum=0; 
+            for(int i = 1; i < firstArray.Length; i++)
+            {
+                if(i%2 !=0)
+                {
+                    sum+=firstArray [i];
+                }
+            } 
+            return sum;
+        }
+
     }      
 }
