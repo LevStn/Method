@@ -1,10 +1,4 @@
 ﻿using Homework4;
-;
-int c = 725;
-int b = 2555555;
 
-
-
-string result=HW3Class.FindTheSameDigitInNumbers(c,b);
-
+int result = HWArrayClass.GetMinElementArray();
 Console.WriteLine(result);
