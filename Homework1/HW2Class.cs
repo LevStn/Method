@@ -126,7 +126,7 @@ namespace Homework4
             }
             else
             {
-                result = "Нет корней";
+                result = (" X=0");
             }
 
             return result;

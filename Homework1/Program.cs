@@ -3,5 +3,5 @@
 ;
 
 
-int result = HWArrayClass.GetIndexMinElementArray( );
+int result = HWArrayClass.GetIndexMaxElementArray( );
 Console.WriteLine($"Ответ {result}");

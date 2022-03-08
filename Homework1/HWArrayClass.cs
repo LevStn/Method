@@ -69,15 +69,36 @@ namespace Homework4
                     minValue = firstArray[i];
                 }
             }
-            for (int i=0;i<firstArray.Length; i++)
-                if(firstArray[i]==minValue)
+            for (int i = 0; i < firstArray.Length; i++)
+            {
+                if (firstArray[i] == minValue)
                 {
                     return i;
                 }
-            return -1;
-            
+            }
+            return -1;                           
+        }
+        public static int GetIndexMaxElementArray()
+        {
+            int[] firstArray=GenerateArray(10);
+            WriteArray(firstArray);
+            int maxValue = firstArray[0];
+            for (int i = 1; i < firstArray.Length; i++)
+            {
+                if (firstArray[i] > maxValue)
+                {
+                    maxValue = firstArray[i];
+                }
+            }
+            for(int i=0;i<firstArray.Length; i++)
+            {
+                if(firstArray[i] == maxValue)
+                {
+                    return i;
+                }
+            }
+            return  1;
                 
         }
-           
-    }
+    }      
 }
