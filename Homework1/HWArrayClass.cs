@@ -56,5 +56,28 @@ namespace Homework4
                 }
             return maxValue;
         }
+        public static int GetIndexMinElementArray()
+        {
+             
+            int [] firstArray = GenerateArray(10);
+            WriteArray(firstArray);
+            int minValue = firstArray[0];
+            for (int i=1; i< firstArray.Length; i++)
+            {
+                if (firstArray[i] <minValue)
+                {
+                    minValue = firstArray[i];
+                }
+            }
+            for (int i=0;i<firstArray.Length; i++)
+                if(firstArray[i]==minValue)
+                {
+                    return i;
+                }
+            return -1;
+            
+                
+        }
+           
     }
 }
