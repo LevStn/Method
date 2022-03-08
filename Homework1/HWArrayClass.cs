@@ -44,5 +44,17 @@ namespace Homework4
             return minValue;
 
         }
+        public static int GetMaxElementArray()
+        {
+            int [] firstArray=GenerateArray(10);
+            WriteArray(firstArray);
+            int maxValue=firstArray[0];
+            for (int i=1; i<firstArray.Length; i++)
+                if(firstArray[i]>maxValue)
+                {
+                    maxValue=firstArray[i];
+                }
+            return maxValue;
+        }
     }
 }

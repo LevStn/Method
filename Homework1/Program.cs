@@ -1,4 +1,4 @@
 ﻿using Homework4;
 
-int result = HWArrayClass.GetMinElementArray();
-Console.WriteLine(result);
+int result = HWArrayClass.GetMaxElementArray();
+Console.WriteLine($"Ответ {result}");
