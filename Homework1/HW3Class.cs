@@ -25,7 +25,7 @@ namespace Homework4
                 if (i % a == 0)
                 {
                     result = +i;
-                    Console.WriteLine(result);
+                   
                 }
             }
             return result;
@@ -173,9 +173,10 @@ namespace Homework4
             return result;
 
         }
-        /*public static void FFFF (int n, out int even, out int notEven)
+        public static int[] GetRangeOfNumbersSumOfEvenNumbersGreaterThanOddNumbers(int n)
         {
-            int tmp;
+            int [] result=new int[n];
+            int tmp = 0;
             int remainder;
             int even;
             int notEven;
@@ -200,12 +201,13 @@ namespace Homework4
                 }
                 if (even > notEven)
                 {
-                    Console.WriteLine(i);
+                    result[tmp] = i;
+                    
 
                 }
-
-            }*/
-
+            }
+            return result;
+        }
         public static string  FindTheSameDigitInNumbers (int numbFirst,int numbSecond)
         {
             int tmp1;
