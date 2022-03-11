@@ -107,28 +107,27 @@ namespace Homework4
         }
         public static double[] SloveTheSquareEquation (double a, double b, double c)
         {
-            double [] result=new double[2];
-            
+            int index = 1;           
             double discriminant = (b * b) - 4 * a * c;
             double rootD = Math.Sqrt(discriminant);
 
+            if (discriminant > 0)
+            {
+                index = 2;
+            }
 
-
+            double [] result=new double[index];
 
             if (discriminant > 0)
             {
-
                 result[0] = (-b + rootD) / (2 * a);
                 result[1] = (-b - rootD) / (2 * a);
-
             }
+
             else if (discriminant == 0)
             {
 
-               
                 result[0] = -b / (2 * b);
-                
-                
 
             }
             else
@@ -136,9 +135,6 @@ namespace Homework4
                 result[0] = 0;
 
             }
-            
-
-
 
             return result;
         }
