@@ -109,17 +109,17 @@ namespace Homework4
 
 
 
-        public static void WriteArray(int[,] array)
+        public static void Write(int[,] array)
         {
             for (int i = 0; i < array.GetLength(0); i++)
             {
                 for(int j=0; j < array.GetLength(1); j++)
                 Console.Write($"{ array[i,j]}  ");
-            Console.WriteLine();
             }
+            Console.WriteLine();
         }
 
-        public static int[,] GenerateRandomArray(int lenght1, int lenght2, int min = -100, int max = 100)
+        public static int[,] GenerateRandom(int lenght1, int lenght2, int min = -100, int max = 100)
         {
             Random random = new Random();
 

@@ -1,17 +1,27 @@
 ﻿using Homework4;
 
 
-/*int[] a = HWArrayClass.GenerateRandomArray(4);
+//int[] a = HWArrayClass.GenerateRandomArray(4);
 
-HWArrayClass.WriteArray(a);
+//HWArrayClass.WriteArray(a);
 
-int [] b=HWArrayClass.ReverseHalfArray(a);
 
-HWArrayClass.WriteArray(b);
-*/
+
+
+double a = 1;
+
+double b = -6;
+
+double c = 9;
+
+double[] d=HW2Class.SloveTheSquareEquation(a,b,c);
+
+HWArrayClass.WriteArray(d);
+
 //Console.WriteLine(b);
 
 
-int n = 34;
-int [] b=HW3Class.GetRangeOfNumbersSumOfEvenNumbersGreaterThanOddNumbers(34);
-HWArrayClass.WriteArray(b);
+//int n = 34;
+//HW3Class.GetRangeOfNumbersSumOfEvenNumbersGreaterThanOddNumbers(n);
+
+

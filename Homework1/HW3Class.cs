@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Homework4
+﻿namespace Homework4
 {
     internal class HW3Class
     {
@@ -17,15 +11,20 @@ namespace Homework4
             }
             return result;
         }
-        public static int GetAllNumbersThatAreDivisibleByTheNumberA(int a)
+        public static int[] GetAllNumbersThatAreDivisibleByTheNumberA(int a)
         {
-            int result = 0;
+            if(a == 0)
+            {
+                throw new Exception("a can't be == 0 ");
+            }
+            int[] result = new int[1000/a];
+            int index = 0;
             for (int i = 1; i <= 1000; i++)
             {
                 if (i % a == 0)
                 {
-                    result = +i;
-                   
+                    result[index++] = i;
+
                 }
             }
             return result;
@@ -80,7 +79,7 @@ namespace Homework4
         }
         public static int OrdinalNumberOfFibonacciNumber(int n)
         {
-            if (n<0)
+            if (n < 0)
             {
                 throw new Exception("n can’t <0");
             }
@@ -93,30 +92,30 @@ namespace Homework4
             }
             return firstNumbFib;
         }
-        public static int FindTheGreatestCommonDivisorUsingTheEuclideanAlgorithm ( int numbA, int numbB)
+        public static int FindTheGreatestCommonDivisorUsingTheEuclideanAlgorithm(int numbA, int numbB)
         {
-            numbA=Math.Abs(numbA);
-            numbB=Math.Abs(numbB);  
-            while ( numbA != numbB)
+            numbA = Math.Abs(numbA);
+            numbB = Math.Abs(numbB);
+            while (numbA != numbB)
             {
-                
 
-                if (numbA == 0|| numbB== 0)
+
+                if (numbA == 0 || numbB == 0)
                 {
                     throw new Exception("variable numbB and numbA can’t == 0");
                 }
-                else if (numbA>numbB)
+                else if (numbA > numbB)
                 {
-                   numbA = numbA - numbB;
+                    numbA = numbA - numbB;
                 }
                 else
                 {
-                   numbB = numbB - numbA;
+                    numbB = numbB - numbA;
                 }
             }
             return numbB;
         }
-        
+
         public static double FindNumberThatIsACubeOfANumberByTheMethodOfHalfDivision(double n)
         {
             double left = 0;
@@ -159,7 +158,7 @@ namespace Homework4
             return numberOfodd;
         }
 
-        public static int GetMirroredNumber (int inputNumb)
+        public static int GetMirroredNumber(int inputNumb)
         {
             int result = 0;
             while (inputNumb > 0)
@@ -175,16 +174,17 @@ namespace Homework4
         }
         public static int[] GetRangeOfNumbersSumOfEvenNumbersGreaterThanOddNumbers(int n)
         {
-            int [] result=new int[n];
-            int tmp = 0;
+            int tmp;
             int remainder;
             int even;
             int notEven;
+            int tmp1 = 0;
+            int[] array = new int[n];
+
             for (int i = 1; i <= n; i++)
             {
                 tmp = i;
-                even = 0;
-                notEven = 0;
+                even = notEven = 0;
                 while (tmp != 0)
                 {
                     remainder = tmp % 10;
@@ -201,14 +201,19 @@ namespace Homework4
                 }
                 if (even > notEven)
                 {
-                    result[tmp] = i;
-                    
+                    array[tmp1] = i;
+                    tmp1++;
 
                 }
             }
+            int[] arrayTmp = array.Distinct().ToArray();
+            int[] result = new int[arrayTmp.Length-1];
+            Array.Copy(arrayTmp, result, arrayTmp.Length-1);
+
             return result;
+
         }
-        public static string  FindTheSameDigitInNumbers (int numbFirst,int numbSecond)
+        public static string FindTheSameDigitInNumbers(int numbFirst, int numbSecond)
         {
             int tmp1;
             int secondNumber;
@@ -242,15 +247,13 @@ namespace Homework4
             {
                 return no;
             }
-
-
-
-
-
-
-
-
-
         }
+
     }
+
 }
+
+
+
+
+

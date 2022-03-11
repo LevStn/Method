@@ -129,7 +129,7 @@ namespace Homework4
             {
                 if (array.Length % 2 != 0)
                 {
-                    int tmp = result[i];
+                    int tmp = result[i];  
                     result[i] = result[result.Length / 2 + 1 + i];
                     result[result.Length / 2 + 1 + i] = tmp;
                 }
@@ -190,7 +190,7 @@ namespace Homework4
             return newArray;
         }
 
-        public static void WriteArray(int[] array)
+        public static void WriteArray(double[] array)
         {
             for (int i = 0; i < array.Length; i++)
             {
