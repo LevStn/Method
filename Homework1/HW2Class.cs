@@ -72,33 +72,45 @@ namespace Homework4
 
                 return result; 
         }
-        public static string GetNumbersInAscendingOrder(double a, double b, double c)
+        public static double[] GetNumbersInAscendingOrder(double a, double b, double c)
         {
-            string result;
-            if (a > b && a > c && b > c)
-            {
-                result = "${ c, b, a }";
+            double [] result =new double[3];
 
+            if (a > b && a > c && b > c)
+            {               
+                result[0] = c;
+                result[1] = b;
+                result[2] = a;
             }
             else if (a > b && a > c && b < c)
             {
-                result = "${b, c, a}";
+                result[0] = b;
+                result[1] = c;
+                result[2] = a;
             }
             else if (a > b && a < c && b < c)
             {
-                result = "${b, a, c}";
+                result[0] = b;
+                result[1] = a;
+                result[2] = c;
             }
             else if (a > c && b > c && b > a)
             {
-                result = "${c, a, b }";
+                result[0] = c;
+                result[1] = a;
+                result[2] = b;
             }
             else if (a < b && a < c && b > c)
             {
-                result = "${a, c, b}";
+                result[0] = a;
+                result[1] = c;
+                result[2] = b;
             }
             else if (a < b && a < c && b > c)
             {
-                result = "${a, b, c}";
+                result[0] = a;
+                result[1] = b;
+                result[2] = c;
             }
             else
                 throw new Exception("The numbers cannot be equal to each other");
@@ -107,6 +119,10 @@ namespace Homework4
         }
         public static double[] SloveTheSquareEquation (double a, double b, double c)
         {
+            if(a==b)
+            {
+                throw new Exception("Numb a cant == numb b");
+            }    
             int index = 1;           
             double discriminant = (b * b) - 4 * a * c;
             double rootD = Math.Sqrt(discriminant);
