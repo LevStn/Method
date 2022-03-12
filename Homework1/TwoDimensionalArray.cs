@@ -113,7 +113,30 @@
         }
 
 
+        public static int [,] ReflectionMainDiagonal(int [,] array)
 
+        {
+            int [,] swap=new int[ array.GetLength(0), array.GetLength(1)];
+
+
+            for(int i=0;i< array.GetLength(0); i++)
+            {
+                for(int j=0;j< array.GetLength(1); j++)
+                {
+                    if(i !=j)
+                    {
+                        swap[i,j] = array[j,i];
+                    }
+                    else
+                    {
+                        swap[i, j] = array[i, j];
+                    }
+                }
+                
+            }
+
+            return swap;
+        }
 
 
 

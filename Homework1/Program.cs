@@ -1,8 +1,9 @@
 ﻿using Homework4;
 
 
-int[,] a = TwoDimensionalArray.GenerateRandom(4,4);
+int[,] a = TwoDimensionalArray.GenerateRandom(3,3);
 
 TwoDimensionalArray.Write(a);
 
-Console.WriteLine(   TwoDimensionalArray.ElementThatIsLargerThanAllItsNeighbors(a));
+int [,] b = TwoDimensionalArray.ReflectionMainDiagonal(a);
+TwoDimensionalArray.Write(b);
