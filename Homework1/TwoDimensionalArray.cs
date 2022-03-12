@@ -1,27 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Homework4
+﻿namespace Homework4
 {
     internal class TwoDimensionalArray
     {
-        public static int GetMinElement(int [,] array)
+        public static int GetMinElement(int[,] array)
         {
-            int minValue= array[0,0];
-            for(int i=0; i<array.GetLength(0); i++)
+            int minValue = array[0, 0];
+            for (int i = 0; i < array.GetLength(0); i++)
             {
-                for (int j=0; j<array.GetLength(1); j++)
-                    if(array[i,j] < minValue)
+                for (int j = 0; j < array.GetLength(1); j++)
+                    if (array[i, j] < minValue)
                     {
-                        minValue = array[i,j];
+                        minValue = array[i, j];
                     }
-            }    
+            }
             return minValue;
         }
-        public static int GetMaxElement(int[,] array )
+        public static int GetMaxElement(int[,] array)
         {
             int maxValue = array[0, 0];
             for (int i = 0; i < array.GetLength(0); i++)
@@ -35,9 +29,9 @@ namespace Homework4
             return maxValue;
         }
 
-        public static int[] GetMinIndex(int[,] array )
+        public static int[] GetMinIndex(int[,] array)
         {
-            int [] tmp = new int[2];
+            int[] tmp = new int[2];
             int minIndex = array[0, 0];
             for (int i = 0; i < array.GetLength(0); i++)
             {
@@ -64,72 +58,106 @@ namespace Homework4
             }
             return tmp;
         }
-        public static int [] GetMaxIndex(int[,] array)
-            {
-                int [] tmp=new int[2];
-
-            
-                int maxIndex = array[0, 0];
-                for (int i = 0; i < array.GetLength(0); i++)
-                {
-                    for (int j = 0; j < array.GetLength(1); j++)
-                    {
-                        if (array[i, j] > maxIndex)
-                        {
-                            maxIndex = array[i, j];
-
-                        }
-                    }
-                }
-                for (int i = 0; i < array.GetLength(0); i++)
-                {
-                    for (int j = 0; j < array.GetLength(1); j++)
-                    {
-                        if (array[i, j] == maxIndex)
-                        {
-
-                            tmp[0] = j;
-                            tmp[1] = i;
-                        }
-                    }
-                }
-              return tmp;
-            }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        public static void Write(int[,] array)
+        public static int[] GetMaxIndex(int[,] array)
         {
+            int[] tmp = new int[2];
+
+
+            int maxIndex = array[0, 0];
             for (int i = 0; i < array.GetLength(0); i++)
             {
-                for(int j=0; j < array.GetLength(1); j++)
-                Console.Write($"{ array[i,j]}  ");
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    if (array[i, j] > maxIndex)
+                    {
+                        maxIndex = array[i, j];
+
+                    }
+                }
             }
-            Console.WriteLine();
-        }
-
-        public static int[,] GenerateRandom(int lenght1, int lenght2, int min = -100, int max = 100)
-        {
-            Random random = new Random();
-
-            int[,] array = new int[lenght1, lenght2];
-            for (int i = 0; i < lenght1; i++)
+            for (int i = 0; i < array.GetLength(0); i++)
             {
-                for(int j = 0; j < lenght2; j++)
-                array[i,j] = random.Next(min, max + 1);
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    if (array[i, j] == maxIndex)
+                    {
+
+                        tmp[0] = j;
+                        tmp[1] = i;
+                    }
+                }
             }
-            return array;
+            return tmp;
         }
+
+        public static int ElementThatIsLargerThanAllItsNeighbors(int[,] array)
+        {
+            int count = 0;
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+
+                    if ((i == 0 || array[i, j] > array[i - 1, j])
+                        && (i == array.GetLength(0) - 1 || array[i, j] > array[i + 1, j])
+                        && (j == 0 || array[i, j] > array[i, j - 1])
+                        && (j == array.GetLength(1) - 1 || array[i, j] > array[i, j + 1])
+                        )
+                    {
+                        count++;
+                    }
+                }
+
+            }
+          return count;
+        }
+
+
+
+
+
+
+
+
+
+
+
+            public static void Write(int[,] array)
+            {
+                for (int i = 0; i < array.GetLength(0); i++)
+                {
+                    for (int j = 0; j < array.GetLength(1); j++)
+                    {
+
+                    int freeeSpace=4- array[i, j].ToString().Length;
+                    
+                        for(int k = 0; k < freeeSpace; k++)
+                        {
+                        Console.Write(" ");
+                        }
+                    
+                        Console.Write($"{ array[i, j]}  ");
+                    }
+                Console.WriteLine();
+                }
+            }
+
+            public static int[,] GenerateRandom(int lenghtX, int lenghtY, int min = -100, int max = 100)
+            {
+                int[,] array = new int[lenghtX, lenghtY];
+                Random random = new Random();
+
+                for (int i = 0; i < lenghtX; i++)
+                {
+                    for (int j = 0; j < lenghtY; j++)
+                    {
+                        array[i, j] = random.Next(min, max + 1);
+
+                    }
+                }
+                return array;
+            }
+        
     }
+
 }
