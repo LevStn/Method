@@ -163,7 +163,7 @@ namespace Homework4
             return array;
         }
 
-        public static int[] SortArrayBubbleDescending(double [] array)
+        public static int[] SortArrayBubbleDescending(int [] array)
         {
 
             int tmp;
@@ -190,7 +190,7 @@ namespace Homework4
             return newArray;
         }
 
-        public static void WriteArray(double[] array)
+        public static void WriteArray(int [] array)
         {
             for (int i = 0; i < array.Length; i++)
             {

@@ -119,10 +119,12 @@ namespace Homework4
         }
         public static double[] SloveTheSquareEquation (double a, double b, double c)
         {
+
             if(a==b)
             {
                 throw new Exception("Numb a cant == numb b");
             }    
+
             int index = 1;           
             double discriminant = (b * b) - 4 * a * c;
             double rootD = Math.Sqrt(discriminant);

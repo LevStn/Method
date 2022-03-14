@@ -6,17 +6,19 @@ using System.Threading.Tasks;
 
 namespace Homework4
 {
-    static class HW1Class
+    public static class HW1Class
     {
-        public static void GetResultDevisionWithRemaider(int a,  int b, out int result, out int remainder)
+        public static int [] GetResultDevisionWithRemaider(int a,  int b)
         {
-            
+            int [] result=new int[2];
             if (b == 0)
             {
                 throw new Exception("variable b can’t == 0");
             }
-            result = a / b;
-            remainder = a % b;
+            result[0] = a / b;
+            result[1] = a % b;
+
+            return result;
         }  
 
 
@@ -49,7 +51,7 @@ namespace Homework4
                 throw new Exception("a can’t ==0");
             }
 
-            double result = (c - b) / 2;
+            double result = (c - b) / a;
 
             return result;
         }
