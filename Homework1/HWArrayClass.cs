@@ -190,7 +190,7 @@ namespace Homework4
             return newArray;
         }
 
-        public static void WriteArray(int [] array)
+        public static void WriteArray(double[] array)
         {
             for (int i = 0; i < array.Length; i++)
             {

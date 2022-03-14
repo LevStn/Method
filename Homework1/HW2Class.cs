@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Homework4
 {
-    internal class HW2Class
+    public class HW2Class
     {
         public static double CompareTwoValuesAndPerformAMathematicalCharacteristicDependingOnTheComparison(double a, double b)
         {
@@ -30,12 +30,12 @@ namespace Homework4
         }
         public static string GetQuarterBasedOnTwoCoordinates (double x, double y)
         {
-            string result;
+            string result = "";
             if (x > 0 && y > 0)
             {
                 result = "Первая координатная четверть";
             }
-            else if (x > 0 && y > 0)
+            else if (x > 0 && y < 0)
             {
                 result = "Четвертая координатная четверть";
             }
@@ -72,12 +72,12 @@ namespace Homework4
 
                 return result; 
         }
-        public static double[] GetNumbersInAscendingOrder(double a, double b, double c)
+        public static int[] GetNumbersInAscendingOrder(int a, int b, int c)
         {
-            double [] result =new double[3];
+            int[] result =new int[3];
 
             if (a > b && a > c && b > c)
-            {               
+            {
                 result[0] = c;
                 result[1] = b;
                 result[2] = a;
@@ -106,12 +106,17 @@ namespace Homework4
                 result[1] = c;
                 result[2] = b;
             }
-            else if (a < b && a < c && b > c)
+          
+            else if (a < b && a < c && b < c)
             {
                 result[0] = a;
                 result[1] = b;
                 result[2] = c;
+
             }
+
+
+
             else
                 throw new Exception("The numbers cannot be equal to each other");
 
@@ -128,6 +133,7 @@ namespace Homework4
             int index = 1;           
             double discriminant = (b * b) - 4 * a * c;
             double rootD = Math.Sqrt(discriminant);
+            
 
             if (discriminant > 0)
             {
