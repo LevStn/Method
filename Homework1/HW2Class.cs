@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System;
+using System.Drawing;
+using System.Collections.Generic;
 
 namespace Homework4
 {
@@ -129,12 +132,12 @@ namespace Homework4
             {
                 throw new Exception("Numb a cant == numb b");
             }    
-
+            
             int index = 1;           
             double discriminant = (b * b) - 4 * a * c;
             double rootD = Math.Sqrt(discriminant);
             
-
+            
             if (discriminant > 0)
             {
                 index = 2;
@@ -156,7 +159,10 @@ namespace Homework4
             }
             else
             {
-                result[0] = 0;
+                
+                {
+                    result[0] = 0;
+                }
 
             }
 
@@ -257,7 +263,7 @@ namespace Homework4
                     totalDecade = "Четырнадцать";
                     break;
                 case 15:
-                    totalDecade += "Пятнадцать";
+                    totalDecade = "Пятнадцать";
                     break;
                 case 16:
                     totalDecade = "Шестнадцать";

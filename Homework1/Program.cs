@@ -9,12 +9,12 @@
 //int [,] b = TwoDimensionalArray.ReflectionMainDiagonal(a);
 //TwoDimensionalArray.Write(b);
 
-double a = 5;
-double b = 3;
-double c = 7;
+double a = 28;
 
+double result = HW3Class.FindNumberThatIsACubeOfANumberByTheMethodOfHalfDivision(a);
+Console.WriteLine(result);
 
-double [] result= HW2Class.SloveTheSquareEquation(a, b, c);
+//int[] result = HW3Class.GetAllNumbersThatAreDivisibleByTheNumberA(a);
 
-HWArrayClass.WriteArray   (result);
+//HWArrayClass.WriteArray   (result);
 

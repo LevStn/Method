@@ -57,7 +57,51 @@ namespace Homework4.Test
             Assert.AreEqual(expected, actual);
 
         }
+        //4
+        //4
+        //4
+        //4
 
+        [TestCase(10,"Десять")]
+        [TestCase(20, "Двадцать")]
+        [TestCase(30, "Тридцать")]
+        [TestCase(40, "Сорок")]
+        [TestCase(50, "Пятьдесят")]
+        [TestCase(60, "Шестьдесят")]
+        [TestCase(70, "Семьдесят")]
+        [TestCase(80, "Восемьдесят")]
+        [TestCase(90, "Девяносто")]
+        [TestCase(95, "Девяносто пять")]
+        [TestCase(21, "Двадцать один")]
+        [TestCase(12, "Двенадцать")]
+        [TestCase(11, "Одинадцать")]
+        [TestCase(13, "Тринадцать")]
+        [TestCase(14, "Четырнадцать")]
+        [TestCase(15, "Пятнадцать")]
+        [TestCase(16, "Шестнадцать")]
+        [TestCase(17, "Семьнадцать")]
+        [TestCase(18, "Восемнадцать")]
+        [TestCase(19, "Девятнадцать")]
+        [TestCase(22, "Двадцать два")]
+        [TestCase(23, "Двадцать три")]
+        [TestCase(24, "Двадцать четыре")]
+        [TestCase(35, "Тридцать пять")]
+        [TestCase(36, "Тридцать шесть")]
+        [TestCase(47, "Сорок семь")]
+        [TestCase(58, "Пятьдесят восемь")]
+        [TestCase(59, "Пятьдесят девять")]
+        [TestCase(63, "Шестьдесят три")]
+        [TestCase(71, "Семьдесят один")]
+        [TestCase(88, "Восемьдесят восемь")]
+        [TestCase(99, "Девяносто девять")]
+
+
+        public void ConvertingTwoDigitNumberToLettersTest(int numb, string expected)
+        {
+             string actual=HW2Class.ConvertingTwoDigitNumberToLetters(numb);
+            
+            Assert.AreEqual(expected, actual);
+        }
 
 
 

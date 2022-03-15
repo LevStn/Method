@@ -1,8 +1,8 @@
 ﻿namespace Homework4
 {
-    internal class HW3Class
+    public class HW3Class
     {
-        public static int RaiseTheNumberToTheDegreeofTheSecondNumber(int a, int b)
+        public static int RaiseTheNumberToTheDegreeOfTheSecondNumber(int a, int b)
         {
             int result = 1;
             for (int i = 0; i < b; i++)
@@ -11,13 +11,13 @@
             }
             return result;
         }
-        public static int[] GetAllNumbersThatAreDivisibleByTheNumberA(int a)
+        public static int[] GetAllNumbersThatAreDivisibleByTheNumberA (int  a)
         {
             if(a == 0)
             {
                 throw new Exception("a can't be == 0 ");
             }
-            int[] result = new int[1000/a];
+            int[] result = new int[1000/ Math.Abs(a)];
             int index = 0;
             for (int i = 1; i <= 1000; i++)
             {
@@ -31,6 +31,7 @@
         }
         public static int FindTheNumberOfPositiveNumbersWhoseSquareIsLessThan(int a)
         {
+            
             int result = 0;
             for (int i = 1; i < a; i++)
             {
@@ -45,17 +46,34 @@
         }
         public static int GetGreatestDivisorOtherThanOriginalNumber(int a)
         {
+            
+            if (a == 0 || a == 1)
+            {
+                throw new Exception("a can`t == 0 or ==1");
+            }
+
             int remainder = 1;
             int result = 0;
-            for (int i = 1; i < a; i++)
-            {
-                remainder = a % i;
-                if (remainder == 0)
-                {
-                    result = +i;
-                }
 
+            if (a < 0)
+            {
+                a = Math.Abs(a);
+                result = a;
             }
+
+            else
+            { 
+                 for (int i = 1; i < a; i++)
+                 {
+                      remainder = a % i;
+                   if (remainder == 0)
+                   {
+                      result = +i;
+                   }
+
+                 }
+            }
+
             return result;
         }
         public static int GetSumOfNumbersFromTheRangeThatAreDivisibleWithoutARemainderBy7(int a, int b)
@@ -116,26 +134,42 @@
             return numbB;
         }
 
-        public static double FindNumberThatIsACubeOfANumberByTheMethodOfHalfDivision(double n)
+        public static double FindNumberThatIsACubeOfANumberByTheMethodOfHalfDivision(double n, double delta=0.1)
         {
             double left = 0;
-            double right = n;
-            double tmp = 0;
+            double right = Math.Abs (n);
+            double resultNumb = right;
 
-            while (left * left * left != n && right * right * right != n)
+            while (Math.Pow(resultNumb + delta, 3) <= Math.Abs(n)
+                || Math.Pow (resultNumb - delta, 3) >= Math.Abs(n))
             {
-                tmp = (left + right) / 2;
+                resultNumb = (left + right) / 2;
 
-                if (tmp * tmp * tmp >= n)
+                if (Math.Pow(resultNumb, 3) > Math.Abs(n))
+
                 {
-                    right = tmp;
+                    right = resultNumb;
                 }
+
+
                 else
                 {
-                    left = tmp;
+                    left = resultNumb;
                 }
+
             }
-            return right;
+            if (n < 0)
+            {
+
+            return -resultNumb;
+
+            }
+
+            else
+            {
+
+                return resultNumb;
+            }
         }
 
         public static int FindTheNumberOfOddDigit(int numbA)
@@ -160,6 +194,10 @@
 
         public static int GetMirroredNumber(int inputNumb)
         {
+            if(inputNumb < 0)
+            {
+                throw new Exception("inputNumb can`t<0");
+            }
             int result = 0;
             while (inputNumb > 0)
             {
@@ -174,6 +212,11 @@
         }
         public static int[] GetRangeOfNumbersSumOfEvenNumbersGreaterThanOddNumbers(int n)
         {
+            if (n == 1 || n == 0)
+            {
+                throw new Exception("n cant`t ==1 or ==0");
+
+            }
             int tmp;
             int remainder;
             int even;
