@@ -30,6 +30,7 @@ namespace Homework4.Test
         public void GetAllNumbersThatAreDivisibleByTheNumberATest(int a, int [] expected)
         {
             int[] actual = HW3Class.GetAllNumbersThatAreDivisibleByTheNumberA(a);
+
             Assert.AreEqual(expected,actual);
 
         }
@@ -42,6 +43,7 @@ namespace Homework4.Test
         public void FindTheNumberOfPositiveNumbersWhoseSquareIsLessThanTest(int a, int expected)
         {
             int actual = HW3Class.FindTheNumberOfPositiveNumbersWhoseSquareIsLessThan(a);
+
             Assert.AreEqual(expected, actual);
 
         }
@@ -55,6 +57,7 @@ namespace Homework4.Test
         public void GetGreatestDivisorOtherThanOriginalNumberTest(int a, int expected)
         {
             int actual = HW3Class.GetGreatestDivisorOtherThanOriginalNumber(a);
+
             Assert.AreEqual(expected, actual); 
 
         }
@@ -70,6 +73,7 @@ namespace Homework4.Test
         public void GetSumOfNumbersFromTheRangeThatAreDivisibleWithoutARemainderBy7Test(int a, int b, int expected)
         {
             int actual = HW3Class.GetSumOfNumbersFromTheRangeThatAreDivisibleWithoutARemainderBy7(a, b);
+
                Assert.AreEqual(expected, actual);
         }
 
@@ -84,6 +88,7 @@ namespace Homework4.Test
         public void OrdinalNumberOfFibonacciNumberTest(int n, int expected)
         {
             int actual = HW3Class.OrdinalNumberOfFibonacciNumber(n);
+
             Assert.AreEqual(expected, actual);
 
         }
@@ -98,6 +103,7 @@ namespace Homework4.Test
         public void FindTheGreatestCommonDivisorUsingTheEuclideanAlgorithmTest (int numbA, int numbB, int expected)
         {
             int actual=HW3Class.FindTheGreatestCommonDivisorUsingTheEuclideanAlgorithm(numbA, numbB);
+
             Assert.AreEqual(actual, expected);
         }
 
@@ -110,6 +116,7 @@ namespace Homework4.Test
         public void FindNumberThatIsACubeOfANumberByTheMethodOfHalfDivisionTest(double n, double expected)
         {
             double actual =HW3Class.FindNumberThatIsACubeOfANumberByTheMethodOfHalfDivision(n);
+
             Assert.AreEqual(expected, actual, 0.5);
         }
 
@@ -124,6 +131,7 @@ namespace Homework4.Test
         public void FindTheNumberOfOddDigitTest(int numbA, int expected)
         {
             int actual = HW3Class.FindTheNumberOfOddDigit(numbA);
+
             Assert.AreEqual(expected, actual);
 
         }
@@ -139,6 +147,7 @@ namespace Homework4.Test
         {
 
             int actual=HW3Class.GetMirroredNumber(inputNumb);
+
             Assert.AreEqual(expected, actual);
 
         }
@@ -152,18 +161,19 @@ namespace Homework4.Test
         public void GetRangeOfNumbersSumOfEvenNumbersGreaterThanOddNumbersTest(int n, int [] expected)
         {
             int [] actual=HW3Class.GetRangeOfNumbersSumOfEvenNumbersGreaterThanOddNumbers(n);
+
             Assert.AreEqual(expected, actual);
 
         }
 
 
-        [TestCase(00, 00,"ДА")]
+        /*[TestCase(00, 00,"ДА")]
        
         public void FindTheSameDigitInNumbersTest(int numbFirst, int numbSecond, int expected)
         {
             
             string actual = HW3Class.FindTheSameDigitInNumbers(numbFirst, numbSecond);
             Assert.AreEqual (expected, actual);
-        }
+        }*/
     }
 }
