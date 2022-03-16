@@ -1,6 +1,6 @@
 ﻿namespace Homework4
 {
-    internal class TwoDimensionalArray
+    public class TwoDimensionalArray
     {
         public static int GetMinElement(int[,] array)
         {
@@ -90,8 +90,9 @@
             return tmp;
         }
 
-        public static int ElementThatIsLargerThanAllItsNeighbors(int[,] array)
+        public static int FindElementThatIsLargerThanAllItsNeighbors(int[,] array)
         {
+            
             int count = 0;
             for (int i = 0; i < array.GetLength(0); i++)
             {

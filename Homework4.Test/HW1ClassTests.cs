@@ -36,6 +36,7 @@ namespace Homework4.Test
 
         {
             int actual=HW1Class.GetTheResultOfEquation(a, b);
+
             Assert.AreEqual(expected, actual);
 
         }
@@ -62,6 +63,7 @@ namespace Homework4.Test
         public  void GetTheResultOfLinearEquationTest(double a, double b, double c, double expected)
         {
             double actual=HW1Class.GetTheResultOfLinearEquation(a, b, c);
+
             Assert.AreEqual(actual, expected);
 
         }

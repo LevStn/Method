@@ -10,8 +10,10 @@ namespace Homework4.Test
         [TestCase(new int[] { 0, 0, 0 }, 0)]
         [TestCase(new int[] { 1, 1, 1 }, 1)]
         [TestCase(new int[] { 0 }, 0)]
+        
         public void GetMinElementArrayTest(int[] firstArray, int expected)
         {
+            
             int actual = HWArrayClass.GetMinElementArray(firstArray);
 
             Assert.AreEqual(expected, actual);
