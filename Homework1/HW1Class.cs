@@ -18,8 +18,6 @@ namespace Homework4
         }  
 
 
-
-
         public static int GetTheResultOfEquation(int a, int b)
         {
             if(b==a)

@@ -13,9 +13,9 @@
         }
         public static int[] GetAllNumbersThatAreDivisibleByTheNumberA (int  a)
         {
-            if(a == 0)
+            if(a == 0 )
             {
-                throw new Exception("a can't be == 0 ");
+                throw new Exception(" a can't be == 0 ");
             }
             int[] result = new int[1000/ Math.Abs(a)];
             int index = 0;
@@ -97,9 +97,9 @@
         }
         public static int OrdinalNumberOfFibonacciNumber(int n)
         {
-            if (n < 0)
+            if (n < 0|| n==0)
             {
-                throw new Exception("n can’t <0");
+                throw new Exception("n can’t <0 or ==0");
             }
             int firstNumbFib = 0;
             int secondNumbFib = 1;
@@ -196,7 +196,7 @@
         {
             if(inputNumb < 0)
             {
-                throw new Exception("inputNumb can`t<0");
+                throw new Exception("inputNumb can`t <0");
             }
             int result = 0;
             while (inputNumb > 0)
@@ -266,13 +266,13 @@
             bool isEqualNumber = false;
             string yes = "ДА";
             string no = "НЕТ";
-            while (numbFirst > 1)
+            while (numbFirst > 0)
             {
                 tmp1 = numbFirst % 10;
                 secondNumber = numbSecond;
-                while (secondNumber >= 1)
+                while (secondNumber > 0)
                 {
-                    tmp2 = secondNumber / 10;
+                    tmp2 = secondNumber % 10;
                     if (tmp1 == tmp2)
                     {
                         isEqualNumber = true;

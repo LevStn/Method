@@ -24,6 +24,7 @@ namespace Homework4
             return result;
 
         }
+
         public static string GetQuarterBasedOnTwoCoordinates (double x, double y)
         {
             string result = "";
@@ -68,6 +69,7 @@ namespace Homework4
 
                 return result; 
         }
+
         public static int[] GetNumbersInAscendingOrder(int a, int b, int c)
         {
             int[] result =new int[3];
@@ -118,12 +120,12 @@ namespace Homework4
 
             return result;
         }
-        public static double[] SloveTheSquareEquation (double a, double b, double c)
+        public static void SloveTheSquareEquation (double a, double b, double c, out string noRoot, out double [] result)
         {
-
-            if(a==b)
+            noRoot = "Решение:";
+            if(a==0)
             {
-                throw new Exception("Numb a cant == numb b");
+                throw new Exception("Numb a cant == 0");
             }    
             
             int index = 1;           
@@ -136,7 +138,7 @@ namespace Homework4
                 index = 2;
             }
 
-            double [] result=new double[index];
+             result=new double[index];
 
             if (discriminant > 0)
             {
@@ -147,19 +149,22 @@ namespace Homework4
             else if (discriminant == 0)
             {
 
-                result[0] = -b / (2 * b);
+                result[0] = -b / (2 * a);
 
             }
-            else
+            else if(discriminant<0)
             {
-                
-                {
-                    result[0] = 0;
-                }
 
+                Array.Resize(ref result, 0);
+
+               noRoot = "Нет Корней";
             }
 
-            return result;
+            
+            
+
+
+
         }
 
 

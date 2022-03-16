@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using System;
 
 namespace Homework4.Test
 {
@@ -23,6 +24,8 @@ namespace Homework4.Test
         }
 
 
+
+
         [TestCase(1000 , new int[] { 1000 })]
         [TestCase(500, new int[] { 500,1000 })]
         [TestCase(-500, new int[] { 500, 1000 })]
@@ -34,6 +37,19 @@ namespace Homework4.Test
             Assert.AreEqual(expected,actual);
 
         }
+
+
+        [TestCase(0)]       
+        public void AddTest_WhenAIsEqual0_ShouldThrowExeption(int a)
+        {
+           
+            Assert.Throws<Exception>(() => HW3Class.GetAllNumbersThatAreDivisibleByTheNumberA(a));
+
+        }
+
+
+
+
         [TestCase(1, 0)]
         [TestCase(0, 0)]
         [TestCase(2, 1)]
@@ -48,12 +64,14 @@ namespace Homework4.Test
 
         }
 
+
+
+
         [TestCase(2, 1)]
         [TestCase(4, 2)]
         [TestCase(25, 5)]
         [TestCase(-25, 25)]
         [TestCase(-500, 500)]
-
         public void GetGreatestDivisorOtherThanOriginalNumberTest(int a, int expected)
         {
             int actual = HW3Class.GetGreatestDivisorOtherThanOriginalNumber(a);
@@ -61,6 +79,19 @@ namespace Homework4.Test
             Assert.AreEqual(expected, actual); 
 
         }
+
+
+        [TestCase(0)]
+        [TestCase(1)]
+        public void AddTest_WhenAIsEqual0or1_ShouldThrowExeption(int a)
+        {
+
+            Assert.Throws<Exception>(() => HW3Class.GetGreatestDivisorOtherThanOriginalNumber(a));
+
+        }
+
+
+
 
         [TestCase(1, 7, 7)]
         [TestCase(1, 27, 42)]
@@ -70,6 +101,8 @@ namespace Homework4.Test
         [TestCase(-14, 7, -14)]
         [TestCase(-14, 0, -21)]
         [TestCase(-21, 7, -35)]
+        [TestCase(0, 0, 0)]
+        [TestCase(-7, -1, -7)]
         public void GetSumOfNumbersFromTheRangeThatAreDivisibleWithoutARemainderBy7Test(int a, int b, int expected)
         {
             int actual = HW3Class.GetSumOfNumbersFromTheRangeThatAreDivisibleWithoutARemainderBy7(a, b);
@@ -78,13 +111,14 @@ namespace Homework4.Test
         }
 
 
+
+
         [TestCase(1, 1)]
         [TestCase(2, 1)]
         [TestCase(3, 2)]
         [TestCase(4, 3)]
         [TestCase(8, 21)]
         [TestCase(18, 2584)]
-
         public void OrdinalNumberOfFibonacciNumberTest(int n, int expected)
         {
             int actual = HW3Class.OrdinalNumberOfFibonacciNumber(n);
@@ -92,6 +126,19 @@ namespace Homework4.Test
             Assert.AreEqual(expected, actual);
 
         }
+
+
+        [TestCase(0)]
+        [TestCase(-1)]
+        [TestCase(-10)]
+        public void AddTest_WhenNIsEqual0OrLess0_ShouldThrowExeption(int n)
+        {
+
+            Assert.Throws<Exception>(() => HW3Class.OrdinalNumberOfFibonacciNumber(n));
+
+        }
+
+
 
 
         [TestCase(2, 8, 2)]
@@ -142,6 +189,7 @@ namespace Homework4.Test
         [TestCase(422222, 222224)]
         [TestCase(467985, 589764)]
         [TestCase(1, 1)]
+        [TestCase(12345, 54321)]
         [TestCase(12345, 54321)]
         public void GetMirroredNumberTest(int inputNumb, int expected)
         {
