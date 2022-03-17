@@ -16,10 +16,21 @@ namespace Homework4.Test
         [TestCase(TwoDMock.TDAMockType.Negative2X2, -5)]
         public void GetMinElementTest(TwoDMock.TDAMockType type, int expected)
         {
+            
             int[,] array = TwoDMock.GetMock(type);
             int actual=TwoDimensionalArray.GetMinElement(array);
 
             Assert.AreEqual(expected, actual);
+        }
+
+
+        [TestCase(TwoDMock.TDAMockType.Empty)]
+        public void AddTestFirst_WhenTDAMockTypeLess1_ShouldThrowExeption(TwoDMock.TDAMockType type)
+        {
+            int[,] array = TwoDMock.GetMock(type);
+            
+            
+            Assert.Throws<Exception>(() => TwoDimensionalArray.GetMinElement(array));
         }
 
 
@@ -38,6 +49,16 @@ namespace Homework4.Test
         }
 
 
+        [TestCase(TwoDMock.TDAMockType.Empty)]
+        public void AddTestSecond_WhenTDAMockTypeLess1_ShouldThrowExeption(TwoDMock.TDAMockType type)
+        {
+            int[,] array = TwoDMock.GetMock(type);
+
+
+            Assert.Throws<Exception>(() => TwoDimensionalArray.GetMaxElement(array));
+        }
+
+
 
 
         [TestCase(TwoDMock.TDAMockType.Positive3X3, new int[] { 2, 1 })]
@@ -50,6 +71,16 @@ namespace Homework4.Test
             int[] actual = TwoDimensionalArray.GetMinIndex(array);
 
             Assert.AreEqual(expected, actual);
+        }
+
+
+        [TestCase(TwoDMock.TDAMockType.Empty)]
+        public void AddTestThird_WhenTDAMockTypeLess1_ShouldThrowExeption(TwoDMock.TDAMockType type)
+        {
+            int[,] array = TwoDMock.GetMock(type);
+
+
+            Assert.Throws<Exception>(() => TwoDimensionalArray.GetMinIndex(array));
         }
 
 
@@ -68,18 +99,38 @@ namespace Homework4.Test
         }
 
 
+        [TestCase(TwoDMock.TDAMockType.Empty)]
+        public void AddTestFourth_WhenTDAMockTypeLess1_ShouldThrowExeption(TwoDMock.TDAMockType type)
+        {
+            int[,] array = TwoDMock.GetMock(type);
+
+
+            Assert.Throws<Exception>(() => TwoDimensionalArray.GetMaxIndex(array));
+        }
+
+
 
 
         [TestCase(TwoDMock.TDAMockType.Positive3X3,1)]
         [TestCase(TwoDMock.TDAMockType.Negative3X3, 1)]
         [TestCase(TwoDMock.TDAMockType.Positive4X4, 3)]
-        [TestCase(TwoDMock.TDAMockType.Negative2X2, 1)]       
+        [TestCase(TwoDMock.TDAMockType.Negative2X2, 1)]
         public void FindElementThatIsLargerThanAllItsNeighborsTest(TwoDMock.TDAMockType type, int expected)
         {
             int[,] array = TwoDMock.GetMock(type);
             int actual = TwoDimensionalArray.FindElementThatIsLargerThanAllItsNeighbors(array);
 
             Assert.AreEqual(expected, actual);
+        }
+
+
+        [TestCase(TwoDMock.TDAMockType.Empty)]
+        public void AddTestFifth_WhenTDAMockTypeLess1_ShouldThrowExeption(TwoDMock.TDAMockType type)
+        {
+            int[,] array = TwoDMock.GetMock(type);
+
+
+            Assert.Throws<Exception>(() => TwoDimensionalArray.FindElementThatIsLargerThanAllItsNeighbors(array));
         }
 
 

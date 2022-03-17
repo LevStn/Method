@@ -24,7 +24,6 @@ namespace Homework4.Test
 
        
 
-
         [TestCase(new int[] { 1, 2, 3 }, 3)]
         [TestCase(new int[] { -1, -2, -3 }, -1)]
         [TestCase(new int[] { 0, 0, 0 }, 0)]
@@ -35,6 +34,14 @@ namespace Homework4.Test
             int actual = HWArrayClass.GetMaxElementArray(firstArray);
 
             Assert.AreEqual(expected, actual);
+        }
+
+
+        [TestCase(new int[] { })]
+        public void AddTest_WhenFirstArrayLess1_ShouldThrowExeption(int[] firstArray)
+        {
+
+            Assert.Throws<Exception>(() => HWArrayClass.GetMaxElementArray(firstArray));
         }
 
 
@@ -91,6 +98,7 @@ namespace Homework4.Test
         [TestCase(new int[] { 1, 2, 3 }, new int[] { 3, 2, 1 })]
         [TestCase(new int[] { 0, 0, 0 }, new int[] { 0, 0, 0 })]
         [TestCase(new int[] { 22, 500, 3 }, new int[] { 3, 500, 22 })]
+        [TestCase(new int[] { -22, -50, -3 }, new int[] { -3, -50, -22 })]
         [TestCase(new int[] { 1 }, new int[] { 1 })]
         [TestCase(new int[] { }, new int[] { })]
         public void ReverseArrayTest(int[] array, int[] expected)
@@ -123,6 +131,7 @@ namespace Homework4.Test
         [TestCase(new int[] { 1, 2, 3, 4 }, new int[] { 3, 4, 1, 2 })]
         [TestCase(new int[] { 0, 0, 0 }, new int[] { 0, 0, 0 })]
         [TestCase(new int[] { 1, 2, 3, 4, 5, }, new int[] { 4, 5, 3, 1, 2 })]
+        [TestCase(new int[] { -1, -2, -3, -4, -5, }, new int[] { -4, -5, -3, -1, -2 })]
         [TestCase(new int[] { 1 }, new int[] { 1 })]
         [TestCase(new int[] { }, new int[] { })]
         public void ReverseHalfArrayTest(int[] array, int[] expected)

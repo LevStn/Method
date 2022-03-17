@@ -23,6 +23,10 @@ namespace Homework4
 
         public static int GetMaxElementArray(int[] firstArray)
         {
+            if (firstArray.Length < 1)
+            {
+                throw new Exception("firstArray can`t <1");
+            }
             
             int maxValue = firstArray[0];
 
@@ -187,6 +191,10 @@ namespace Homework4
             return array;
         }
 
+
+
+
+
         public static int[] CopyArray(int[] array)
         {
             int[] newArray = new int[array.Length];
@@ -216,13 +224,5 @@ namespace Homework4
         }
             
     }
-
-
-
-
-
-
-
-
 
 }     

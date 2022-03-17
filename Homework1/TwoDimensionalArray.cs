@@ -4,6 +4,11 @@
     {
         public static int GetMinElement(int[,] array)
         {
+            if(array.GetLength(0) < 1|| array.GetLength(1) < 1)
+            {
+                throw new Exception("array can`==null");
+            }
+
             int minValue = array[0, 0];
             for (int i = 0; i < array.GetLength(0); i++)
             {
@@ -15,8 +20,14 @@
             }
             return minValue;
         }
+
         public static int GetMaxElement(int[,] array)
         {
+            if (array.GetLength(0) < 1 || array.GetLength(1) < 1)
+            {
+                throw new Exception("array can`==null");
+            }
+
             int maxValue = array[0, 0];
             for (int i = 0; i < array.GetLength(0); i++)
             {
@@ -31,6 +42,11 @@
 
         public static int[] GetMinIndex(int[,] array)
         {
+            if (array.GetLength(0) < 1 || array.GetLength(1) < 1)
+            {
+                throw new Exception("array can`==null");
+            }
+
             int[] tmp = new int[2];
             int minIndex = array[0, 0];
             for (int i = 0; i < array.GetLength(0); i++)
@@ -58,8 +74,14 @@
             }
             return tmp;
         }
+
         public static int[] GetMaxIndex(int[,] array)
         {
+            if (array.GetLength(0) < 1 || array.GetLength(1) < 1)
+            {
+                throw new Exception("array can`==null");
+            }
+
             int[] tmp = new int[2];
 
 
@@ -92,7 +114,11 @@
 
         public static int FindElementThatIsLargerThanAllItsNeighbors(int[,] array)
         {
-            
+            if (array.GetLength(0) < 1 || array.GetLength(1) < 1)
+            {
+                throw new Exception("array can`==null");
+            }
+
             int count = 0;
             for (int i = 0; i < array.GetLength(0); i++)
             {
@@ -112,7 +138,6 @@
             }
           return count;
         }
-
 
         public static int [,] ReflectionMainDiagonal(int [,] array)
 
@@ -141,12 +166,7 @@
 
 
 
-
-
-
-
-
-            public static void Write(int[,] array)
+        public static void Write(int[,] array)
             {
                 for (int i = 0; i < array.GetLength(0); i++)
                 {
@@ -166,7 +186,7 @@
                 }
             }
 
-            public static int[,] GenerateRandom(int lenghtX, int lenghtY, int min = -100, int max = 100)
+        public static int[,] GenerateRandom(int lenghtX, int lenghtY, int min = -100, int max = 100)
             {
                 int[,] array = new int[lenghtX, lenghtY];
                 Random random = new Random();
