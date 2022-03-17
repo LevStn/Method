@@ -1,15 +1,11 @@
 ﻿using Homework4;
 
 
-int a = 1;
-int b = -8;  
-int c = 12;
-double[] d;
-string re;
+int[] a = new int[] {};
 
+HWArrayClass.WriteArray(a);
 
-HW2Class.SloveTheSquareEquation(a, b, c, out re, out d);
+int b = HWArrayClass.GetMaxElementArray(a);
 
-Console.WriteLine(re);
+Console.WriteLine(b);
 
-HWArrayClass.WriteArray(d);

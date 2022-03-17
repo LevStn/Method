@@ -38,6 +38,7 @@ namespace Homework4
             b = tmp;
         }
        
+
         public static double GetTheResultOfLinearEquation(double a, double b, double c) 
         {
             if(a==0)

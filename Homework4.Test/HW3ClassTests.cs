@@ -146,13 +146,26 @@ namespace Homework4.Test
         [TestCase(28, 7, 7)]
         [TestCase(25, 15, 5)]
         [TestCase(-300, 36, 12)]
-        
+        [TestCase(27, 27, 27)]
         public void FindTheGreatestCommonDivisorUsingTheEuclideanAlgorithmTest (int numbA, int numbB, int expected)
         {
             int actual=HW3Class.FindTheGreatestCommonDivisorUsingTheEuclideanAlgorithm(numbA, numbB);
 
             Assert.AreEqual(actual, expected);
         }
+
+
+        [TestCase(0, 0)]
+        [TestCase(0, -1)]
+        [TestCase(1, 0)]
+        public void AddTest_WhenNumbAOrNumbBIsEqual0_ShouldThrowExeption(int numbA, int numbB)
+        {
+
+            Assert.Throws<Exception>(() => HW3Class.FindTheGreatestCommonDivisorUsingTheEuclideanAlgorithm(numbA, numbB));
+
+        }
+
+
 
 
         [TestCase(28,3)]
@@ -168,13 +181,14 @@ namespace Homework4.Test
         }
 
 
+
+
         [TestCase(123, 2)]
         [TestCase(0, 0)]
         [TestCase(246, 0)]
         [TestCase(-333, 3)]
         [TestCase(333, 3)]
         [TestCase(12, 1)]
-
         public void FindTheNumberOfOddDigitTest(int numbA, int expected)
         {
             int actual = HW3Class.FindTheNumberOfOddDigit(numbA);
@@ -182,6 +196,9 @@ namespace Homework4.Test
             Assert.AreEqual(expected, actual);
 
         }
+
+
+
 
         [TestCase(00, 00)]
         [TestCase(111, 111)]
@@ -201,6 +218,18 @@ namespace Homework4.Test
         }
 
 
+        [TestCase(-1)]
+        [TestCase(-22)]
+        [TestCase(-100)]
+        public void AddTest_WhenInputNumbLess0_ShouldThrowExeption(int inputNumb)
+        {
+            Assert.Throws<Exception>(() => HW3Class.GetMirroredNumber(inputNumb));
+
+        }
+
+
+
+
         [TestCase(23,new int[] {2, 4, 6, 8, 12, 14, 16, 18, 20, 21, 22 })]
         [TestCase(10, new int[] { 2, 4, 6, 8 })]
         [TestCase(2, new int[] { 2 })]
@@ -215,13 +244,43 @@ namespace Homework4.Test
         }
 
 
-        /*[TestCase(00, 00,"ДА")]
-       
-        public void FindTheSameDigitInNumbersTest(int numbFirst, int numbSecond, int expected)
+        [TestCase(1)]
+        [TestCase(0)]
+        [TestCase(-5)]
+        public void AddTest_WhenNEqualOrLess1_ShouldThrowExeption(int n)
+        {
+            Assert.Throws<Exception>(() => HW3Class.GetRangeOfNumbersSumOfEvenNumbersGreaterThanOddNumbers(n));
+
+        }
+
+
+
+
+        [TestCase(123, 1564,"ДА")]
+        [TestCase(26541, 1, "ДА")]
+        [TestCase(26541, 66666, "ДА")]
+        [TestCase(5, 5, "ДА")]
+        [TestCase(2541, 66666, "НЕТ")]
+        [TestCase(1, 2, "НЕТ")]
+        [TestCase(2978, 1454444, "НЕТ")]
+        [TestCase(-222, -211, "ДА")]       
+        public void FindTheSameDigitInNumbersTest(int numbFirst, int numbSecond, string expected)
         {
             
             string actual = HW3Class.FindTheSameDigitInNumbers(numbFirst, numbSecond);
             Assert.AreEqual (expected, actual);
-        }*/
+        }
+
+
+        [TestCase(0, 0)]
+        [TestCase(123, 0)]
+        [TestCase(0, 1564)]
+        public void AddTest_WhenNumbFirstOrNumbSecondisEqualNull_ShouldThrowExeprion(int numbFirst, int numbSecond)
+        {
+
+            Assert.Throws<Exception>(() => HW3Class.FindTheSameDigitInNumbers(numbFirst, numbSecond));
+        }
+
+
     }
 }

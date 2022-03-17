@@ -8,9 +8,10 @@ namespace Homework4
 
         public static int GetMinElementArray(int[] firstArray)
         {
+            
 
-            int minValue = firstArray[0];
-            for (int i = 1; i < firstArray.Length; i++)
+            int minValue = firstArray.Length;
+            for (int i = 0; i < firstArray.Length; i++)
                 if (firstArray[i] < minValue)
                 {
                     minValue = firstArray[i];
@@ -22,20 +23,26 @@ namespace Homework4
 
         public static int GetMaxElementArray(int[] firstArray)
         {
+            
             int maxValue = firstArray[0];
-            for (int i = 1; i < firstArray.Length; i++)
-                if (firstArray[i] > maxValue)
+
+            for (int i = 0; i < firstArray.Length; i++)
+
+                  if (firstArray[i] > maxValue)
                 {
                     maxValue = firstArray[i];
                 }
+
             return maxValue;
+
+           
         }
 
         public static int GetIndexMinElementArray(int[] firstArray)
         {
             int indexMin = 0;
-            int minValue = firstArray[0];
-            for (int i = 1; i < firstArray.Length; i++)
+            int minValue = firstArray.Length;
+            for (int i = 0; i < firstArray.Length; i++)
             {
                 if (firstArray[i] < minValue)
                 {
@@ -56,8 +63,8 @@ namespace Homework4
         public static int GetIndexMaxElementArray(int[] firstArray)
         {
             int indexMax = 0;
-            int maxValue = firstArray[0];
-            for (int i = 1; i < firstArray.Length; i++)
+            int maxValue = firstArray.Length- firstArray.Length;
+            for (int i = 0; i < firstArray.Length; i++)
             {
                
                 if (firstArray[i] > maxValue)
@@ -105,6 +112,7 @@ namespace Homework4
 
         public static int NumberOfOddElements(int[] firstArray)
         {
+
             int sum = 0;
             for (int i = 0; i < firstArray.Length; i++)
             {
@@ -186,7 +194,7 @@ namespace Homework4
             return newArray;
         }
 
-        public static void WriteArray(double[] array)
+        public static void WriteArray(int[] array)
         {
             for (int i = 0; i < array.Length; i++)
             {

@@ -25,6 +25,7 @@ namespace Homework4
 
         }
 
+
         public static string GetQuarterBasedOnTwoCoordinates (double x, double y)
         {
             string result = "";
@@ -69,6 +70,7 @@ namespace Homework4
 
                 return result; 
         }
+
 
         public static int[] GetNumbersInAscendingOrder(int a, int b, int c)
         {
@@ -120,6 +122,8 @@ namespace Homework4
 
             return result;
         }
+
+
         public static void SloveTheSquareEquation (double a, double b, double c, out string noRoot, out double [] result)
         {
             noRoot = "Решение:";
@@ -167,8 +171,7 @@ namespace Homework4
 
         }
 
-
-    
+   
         public static string ConvertingTwoDigitNumberToLetters(int numb)
         {
             int oneNumb = numb % 10;
@@ -279,6 +282,7 @@ namespace Homework4
 
             return totalDecade;
         }
+
 
     }
 }

@@ -14,7 +14,6 @@ namespace Homework4.Test
         [TestCase(TwoDMock.TDAMockType.Negative3X3,-55 )]
         [TestCase(TwoDMock.TDAMockType.Positive4X4, 1)]
         [TestCase(TwoDMock.TDAMockType.Negative2X2, -5)]
-     
         public void GetMinElementTest(TwoDMock.TDAMockType type, int expected)
         {
             int[,] array = TwoDMock.GetMock(type);
@@ -22,6 +21,9 @@ namespace Homework4.Test
 
             Assert.AreEqual(expected, actual);
         }
+
+
+
 
         [TestCase(TwoDMock.TDAMockType.Positive3X3, 5)]
         [TestCase(TwoDMock.TDAMockType.Negative3X3, -1)]
@@ -35,6 +37,9 @@ namespace Homework4.Test
             Assert.AreEqual(expected, actual);
         }
 
+
+
+
         [TestCase(TwoDMock.TDAMockType.Positive3X3, new int[] { 2, 1 })]
         [TestCase(TwoDMock.TDAMockType.Positive4X4, new int[] { 2, 1 })]
         [TestCase(TwoDMock.TDAMockType.Negative3X3, new int[] { 2, 2 })]
@@ -47,11 +52,13 @@ namespace Homework4.Test
             Assert.AreEqual(expected, actual);
         }
 
+
+
+
         [TestCase(TwoDMock.TDAMockType.Positive3X3, new int[] { 2, 2 })]
         [TestCase(TwoDMock.TDAMockType.Positive4X4, new int[] { 3, 3 })]
         [TestCase(TwoDMock.TDAMockType.Negative3X3, new int[] { 0, 0 })]
-        [TestCase(TwoDMock.TDAMockType.Negative2X2, new int[] { 0, 0 })]
-      
+        [TestCase(TwoDMock.TDAMockType.Negative2X2, new int[] { 0, 0 })]    
         public void GetMaxIndexTest(TwoDMock.TDAMockType type, int[] expected)
         {
             int[,] array = TwoDMock.GetMock(type);
@@ -61,11 +68,12 @@ namespace Homework4.Test
         }
 
 
+
+
         [TestCase(TwoDMock.TDAMockType.Positive3X3,1)]
         [TestCase(TwoDMock.TDAMockType.Negative3X3, 1)]
         [TestCase(TwoDMock.TDAMockType.Positive4X4, 3)]
-        [TestCase(TwoDMock.TDAMockType.Negative2X2, 1)]
-        
+        [TestCase(TwoDMock.TDAMockType.Negative2X2, 1)]       
         public void FindElementThatIsLargerThanAllItsNeighborsTest(TwoDMock.TDAMockType type, int expected)
         {
             int[,] array = TwoDMock.GetMock(type);
@@ -76,12 +84,12 @@ namespace Homework4.Test
 
 
 
+
         [TestCase(TwoDMock.TDAMockType.Positive3X3, TwoDMock.TDAMockType.Positive3X3Swap)]
         [TestCase(TwoDMock.TDAMockType.Positive4X4, TwoDMock.TDAMockType.Positive4X4Swap)]
         [TestCase(TwoDMock.TDAMockType.Negative3X3, TwoDMock.TDAMockType.Negative3X3Swap)]
         [TestCase(TwoDMock.TDAMockType.Negative2X2, TwoDMock.TDAMockType.Negative3X3Swap)]
         [TestCase(TwoDMock.TDAMockType.Empty, TwoDMock.TDAMockType.Empty)]
-
         public void ReflectionMainDiagonalTest(TwoDMock.TDAMockType type, TwoDMock.TDAMockType  expectedType)
         {
 
@@ -90,6 +98,7 @@ namespace Homework4.Test
             int[,] actual = TwoDimensionalArray.ReflectionMainDiagonal(array);
 
         }
+
 
     }
 }

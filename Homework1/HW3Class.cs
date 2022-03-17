@@ -11,6 +11,8 @@
             }
             return result;
         }
+
+
         public static int[] GetAllNumbersThatAreDivisibleByTheNumberA (int  a)
         {
             if(a == 0 )
@@ -29,6 +31,8 @@
             }
             return result;
         }
+
+
         public static int FindTheNumberOfPositiveNumbersWhoseSquareIsLessThan(int a)
         {
             
@@ -44,6 +48,8 @@
             }
             return result;
         }
+
+
         public static int GetGreatestDivisorOtherThanOriginalNumber(int a)
         {
             
@@ -76,6 +82,8 @@
 
             return result;
         }
+
+
         public static int GetSumOfNumbersFromTheRangeThatAreDivisibleWithoutARemainderBy7(int a, int b)
         {
             int tmp;
@@ -95,6 +103,8 @@
                 }
             return result;
         }
+
+
         public static int OrdinalNumberOfFibonacciNumber(int n)
         {
             if (n < 0|| n==0)
@@ -110,29 +120,33 @@
             }
             return firstNumbFib;
         }
+
+
         public static int FindTheGreatestCommonDivisorUsingTheEuclideanAlgorithm(int numbA, int numbB)
         {
             numbA = Math.Abs(numbA);
             numbB = Math.Abs(numbB);
+
+            if (numbA == 0 || numbB == 0)
+            {
+                throw new Exception("variable numbB and numbA can’t == 0");
+            }
+
             while (numbA != numbB)
             {
 
-
-                if (numbA == 0 || numbB == 0)
+                if (numbA > numbB)
                 {
-                    throw new Exception("variable numbB and numbA can’t == 0");
-                }
-                else if (numbA > numbB)
-                {
-                    numbA = numbA - numbB;
+                   numbA = numbA - numbB;
                 }
                 else
                 {
-                    numbB = numbB - numbA;
+                   numbB = numbB - numbA;
                 }
             }
             return numbB;
         }
+
 
         public static double FindNumberThatIsACubeOfANumberByTheMethodOfHalfDivision(double n, double delta=0.1)
         {
@@ -172,6 +186,7 @@
             }
         }
 
+
         public static int FindTheNumberOfOddDigit(int numbA)
         {
             int tmp;
@@ -192,6 +207,7 @@
             return numberOfodd;
         }
 
+
         public static int GetMirroredNumber(int inputNumb)
         {
             if(inputNumb < 0)
@@ -210,11 +226,13 @@
             return result;
 
         }
+
+
         public static int[] GetRangeOfNumbersSumOfEvenNumbersGreaterThanOddNumbers(int n)
         {
-            if (n == 1 || n == 0)
+            if (n <=1)
             {
-                throw new Exception("n cant`t ==1 or ==0");
+                throw new Exception(" !n <=1 ");
 
             }
             int tmp;
@@ -256,8 +274,15 @@
             return result;
 
         }
+
+
         public static string FindTheSameDigitInNumbers(int numbFirst, int numbSecond)
         {
+            if( numbFirst==0 || numbSecond == 0)
+            {
+                throw new Exception("numbFirst || numbSecond can`t ==0 ");
+            }
+
             int tmp1;
             int secondNumber;
             int tmp2;
@@ -266,6 +291,8 @@
             bool isEqualNumber = false;
             string yes = "ДА";
             string no = "НЕТ";
+
+            
             while (numbFirst > 0)
             {
                 tmp1 = numbFirst % 10;
